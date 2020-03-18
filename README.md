@@ -10,3 +10,5 @@ It contains commonly used sententenses in both languages. The data of this datas
 lines with each composed of a sentence in english language and its corresponding translation in french language, both seperated by a comma. (see the following figure)
 
 ![dataset_arranged](https://user-images.githubusercontent.com/1300982/76970927-d7e7ed80-692c-11ea-8345-ba5630490e83.png)
+
+Furthermore, these data have been splitted out so as to get the training and test data in to two seperated csv files.
