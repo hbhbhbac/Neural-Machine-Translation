@@ -7,4 +7,5 @@ The NMT will attempt to perforn an English to French translation experiment.
 
 The dataset user to train this NMT can be freely downloaded at [http://www.manythings.org/anki/](http://www.manythings.org/anki/). 
 It contains commonly used sententenses in both languages. The data of this dataset have been transfered to a csv file and arranged in 
-lines with each composed of a sentence in english language and its corresponding translation in french language, both seperated by a comma
+lines with each composed of a sentence in english language and its corresponding translation in french language, both seperated by a comma.(see the following figure)
+![dataset_arranged](https://user-images.githubusercontent.com/1300982/76970927-d7e7ed80-692c-11ea-8345-ba5630490e83.png)
