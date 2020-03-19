@@ -17,5 +17,6 @@ Training the network with few training is already producing very promising resul
 
 ![results](https://user-images.githubusercontent.com/1300982/77025761-3dba9080-6992-11ea-9c65-d78aeca40d90.png)
 
-![res](https://user-images.githubusercontent.com/1300982/77025798-5460e780-6992-11ea-8949-0696d155e78a.png)
+![res](https://user-images.githubusercontent.com/1300982/77025920-ab66bc80-6992-11ea-8d41-bf47449043aa.png)
+
 
