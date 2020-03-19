@@ -1188,7 +1188,6 @@ I wrote it.,Je l'ai écrit.
 I wrote it.,C'est moi qui l'ai écrit.
 I'd accept.,J'accepterais.
 I'll check.,Je vérifierai.
-I'll do it.,Je vais le faire.
 I'll do it.,Je le ferai.
 I'll drive.,Je conduirai.
 I'll go in.,J'entrerai.
@@ -1413,7 +1412,6 @@ Take cover!,Mets-toi à l'abri!
 Take cover!,Mettez-vous à l'abri!
 Take notes.,Prends des notes.
 Take notes.,Prenez des notes.
-Take these.,Prends ça.
 Talk to me!,Parle-moi!
 Talk to me!,Parle-moi!
 Talk to me!,Parlez-moi!
@@ -1862,7 +1860,6 @@ Don't smoke.,Ne fumez pas.
 Don't speak.,Ne parle pas.
 Don't worry.,T'inquiète pas.
 Don't worry.,T'inquiète.
-Don't worry.,Ne t'en fais pas.
 Don't worry.,Ne vous en faites pas.
 Don't worry.,Ne vous inquiétez pas.
 Finish this.,Finis ça.
@@ -2056,7 +2053,6 @@ I got lucky.,J'ai eu de la chance.
 I got lucky.,J'ai eu du bol.
 I got upset.,J'ai été contrariée.
 I got upset.,Je me suis fâchée.
-I got upset.,Je me suis fâché.
 I got upset.,J'ai été contrarié.
 I guess not.,J'imagine que non.
 I guess not.,Je suppose que non.
@@ -2278,3 +2274,552 @@ I'm at home.,Je suis à la maison.
 I'm at home.,Je suis dans la maison.
 I'm at work.,Je suis au travail.
 I'm baffled.,Je suis perplexe.
+I'm blessed.,Je suis béni.
+I'm blessed.,Je suis bénie.
+I'm careful.,Je suis prudent.
+I'm careful.,Je suis prudente.
+I'm certain.,Je suis sûr.
+I'm certain.,Je suis certain.
+I'm chicken.,J'ai les foies.
+I'm chicken.,J'ai les chocottes.
+I'm cooking.,Je cuisine.
+I'm correct.,J'ai raison.
+I'm curious.,Je suis curieux.
+I'm curious.,Je suis curieuse.
+I'm dancing.,Je suis en train de danser.
+I'm dieting.,Je suis au régime.
+I'm driving.,Je suis en train de conduire.
+I'm driving.,Je conduis.
+I'm engaged.,Je suis fiancé.
+I'm engaged.,Je suis fiancée.
+I'm excited.,Je suis excité.
+I'm excited.,Je suis excitée.
+I'm falling.,Je tombe.
+I'm fasting.,Je fais la diète.
+I'm fasting.,Je suis à la diète.
+I'm finicky.,Je suis méticuleux.
+I'm finicky.,Je suis méticuleuse.
+I'm frantic.,Je suis affolé.
+I'm frantic.,Je suis affolée.
+I'm furious.,Je suis furieux.
+I'm healthy.,Je suis en bonne santé.
+I'm humming.,Je fredonne.
+I'm in love.,Je suis amoureux.
+I'm in love.,Je suis amoureuse.
+I'm in luck.,Je suis veinard.
+I'm in luck.,Je suis veinarde.
+I'm jealous.,Je suis jalouse.
+I'm jittery.,J'ai la frousse.
+I'm kidding.,Je plaisante.
+I'm kidding.,Je rigole!
+I'm kidding.,Je blague!
+I'm leaving.,Je pars.
+I'm married.,Je suis marié.
+I'm married.,Je suis mariée.
+I'm nervous.,Je suis nerveux.
+I'm nervous.,Je suis nerveuse.
+I'm neutral.,Je suis neutre.
+I'm no fool.,Je ne suis pas une idiote.
+I'm no hero.,Je ne suis pas un héros.
+I'm no liar.,Je ne suis pas un menteur.
+I'm not Tom.,Je ne suis pas Tom.
+I'm not fat.,Je ne suis pas gros.
+I'm not mad.,Je ne suis pas fou.
+I'm not mad.,Je ne suis pas folle.
+I'm not old.,Je ne suis pas vieux.
+I'm not old.,Je ne suis pas vieille.
+I'm not sad.,Je ne suis pas triste.
+I'm not shy.,Je ne suis pas timide.
+I'm on duty.,Je suis en service.
+I'm patient.,Je suis patiente.
+I'm patient.,Je suis patient.
+I'm popular.,Je suis populaire.
+I'm psyched.,Je suis remonté.
+I'm psychic.,Je suis voyant.
+I'm psychic.,Je suis voyante.
+I'm puzzled.,Je suis perplexe.
+I'm reading.,Je lis.
+I'm relaxed.,Je suis détendu.
+I'm relaxed.,Je suis détendue.
+I'm retired.,Je suis retraité.
+I'm retired.,Je suis retraitée.
+I'm retired.,Je suis pensionné.
+I'm retired.,Je suis pensionnée.
+I'm selfish.,Je suis égoïste.
+I'm serious.,Je suis sérieux.
+I'm shocked.,Je suis choqué.
+I'm shocked.,Je suis choquée.
+I'm sincere.,Je suis sincère.
+I'm sloshed.,Je suis bourré.
+I'm sloshed.,Je suis bourrée.
+I'm smashed.,Je suis fracassé!
+I'm so cold.,J'ai tellement froid.
+I'm so full.,Je suis tellement rassasié.
+I'm so glad.,Je suis si heureux.
+I'm starved.,Je meurs de faim!
+I'm starved.,J'ai l'estomac dans les talons.
+I'm starved.,J'ai la dalle.
+I'm starved.,J'ai les crocs.
+I'm staying.,Je reste.
+I'm stuffed.,Je suis gavé.
+I'm stuffed.,Je suis gavée.
+I'm stunned.,Je suis sidéré.
+I'm stunned.,Je suis sidérée.
+I'm talking.,Je suis en train de discuter.
+I'm teasing.,Je taquine.
+I'm thirsty.,J'ai soif.
+I'm through.,J'en ai fini.
+I'm through.,J'en ai terminé.
+I'm too fat.,Je suis trop gros.
+I'm touched.,Je suis touché.
+I'm touched.,Je suis touchée.
+I'm trapped.,Je suis piégée.
+I'm trapped.,Je suis piégé.
+I'm unarmed.,Je suis désarmé.
+I'm unhappy.,Je suis mécontent.
+I'm unhappy.,Je suis mécontente.
+I'm unlucky.,J'ai la schcoumoune.
+I'm wealthy.,Je suis riche.
+I'm wealthy.,Je suis fortuné.
+I'm wealthy.,Je suis fortunée.
+I'm winning.,Je gagne.
+I'm winning.,Je l'emporte.
+I'm working.,Je suis en train de travailler.
+I'm worried.,Je me fais du souci.
+I've failed.,J'ai échoué.
+Ignore that.,Ne faites pas attention à ça.
+Ignore that.,Ignore ça.
+Ignore that.,Ignorez ça.
+Ignore that.,N'en tenez pas compte.
+Ignore them.,Ignore-les.
+Ignore them.,Ignorez-les.
+Is Tom here?,Est-ce que Tom est ici?
+Is Tom hurt?,Tom est-il blessé?
+Is Tom lazy?,Est-ce que Tom est paresseux?
+Is Tom lazy?,Tom est-il paresseux?
+Is Tom rich?,Est-ce que Tom est riche?
+Is Tom rich?,Tom est-il riche?
+Is Tom safe?,Tom est-il en sécurité?
+Is Tom safe?,Tom ne risque-t-il rien?
+Is Tom safe?,Tom est-il à l'abri?
+Is Tom sure?,Est-ce que Tom est sûr?
+Is Tom well?,Est-ce que Tom va bien?
+Is Tom well?,Est-ce que Tom va bien?
+Is Tom well?,Tom va-t-il bien?
+Is he right?,A-t-il raison?
+Is it clean?,Est-ce propre?
+Is it clear?,Est-ce clair?
+Is it dirty?,Est-ce sale?
+Is it dirty?,Est-ce sale?
+Is it fatal?,Est-ce fatal?
+Is it legal?,Est-ce légal?
+Is it ready?,Est-ce prêt?
+Is it to go?,Ça doit partir?
+Is it to go?,Cela doit-il partir?
+Is it to go?,À emporter?
+Is it yours?,Est-ce à toi?
+Is it yours?,Est-ce à vous?
+Is it yours?,Vous appartient-il?
+Is it yours?,Est-ce le vôtre?
+Is it yours?,Est-ce le tien?
+Is it yours?,Est-ce la tienne?
+Is it yours?,Est-ce la vôtre?
+Is she gone?,S'en est-elle allée?
+Is that Tom?,Est-ce Tom?
+Is that all?,C'est tout?
+Is that you?,Est-ce toi?
+Is that you?,Est-ce vous?
+Is that you?,Est-ce que c'est vous?
+Is this art?,Est-ce de l'art?
+It can't be!,C'est pas possible!
+It happened.,C'est arrivé.
+It is foggy.,Il y a du brouillard.
+It may rain.,Il pourrait pleuvoir.
+Nice timing.,Moins une!
+It was fair.,C'était juste.
+It was flat.,Il était plat.
+It was flat.,Elle était plate.
+It was hard.,C'était dur.
+It was hard.,C'était difficile.
+It was long.,C'était long.
+It'll break.,Il va se briser.
+It'll break.,Ça va casser.
+It'll break.,Ça va se biser.
+It'll break.,Ça va rompre.
+Nice timing.,Tout juste!
+It's Monday.,Nous sommes lundi.
+It's a doll.,C'est une poupée.
+It's a fact.,C'est un fait.
+It's a fake.,C'est un faux.
+It's a fake.,C'est une contrefaçon.
+It's a rule.,C'est une règle.
+It's a rule.,Il s'agit d'une règle.
+It's a scam.,C'est une arnaque.
+It's a scam.,Il s'agit d'une arnaque.
+It's a sign.,C'est un signe.
+It's a song.,C'est une chanson.
+It's all OK.,Tout est d'équerre.
+It's all OK.,C'est tout bon.
+It's broken.,C'est cassé.
+It's cloudy.,Le temps est couvert.
+It's ironic.,C'est ironique.
+It's locked.,C'est verrouillé.
+It's my job.,C'est mon métier.
+It's my job.,C'est mon emploi.
+It's no use.,Ça ne sert à rien.
+It's not us.,Ce n'est pas nous.
+It's poison.,C'est du poison.
+It's secret.,C'est secret.
+It's silent.,C'est silencieux.
+It's spring.,C'est le printemps.
+It's stupid.,C'est bête.
+It's urgent.,C'est urgent.
+It's warmer.,C'est plus chaud.
+It's warmer.,Il fait plus chaud.
+Just say no.,Dites simplement non!
+Just say no.,Dis simplement non!
+Keep trying.,Continue à essayer.
+Keep trying.,Continue d'essayer.
+Keep trying.,Continuez à essayer.
+Keep trying.,Continuez d'essayer.
+Let me help.,Laisse-moi t'aider!
+Let me help.,Laissez-moi vous aider!
+Let me know.,Fais-le moi savoir!
+Let me know.,Avise-moi!
+Let me talk.,Laisse-moi parler.
+Let me talk.,Laissez-moi parler.
+Let me talk.,Laissez-moi parler.
+Let's begin.,Commençons!
+Let's dance.,Dansons.
+Let's do it!,Faisons-le!
+Let's do it!,Faisons-le!
+Let's do it!,On s'y met!
+Let's do it!,Mettons-nous y!
+Let's do it.,Faisons-le.
+Let's drink.,Buvons!
+Let's hurry.,Dépêchons-nous.
+Let's party.,Célébrons.
+Let's party.,Faisons la fête.
+Let's split.,Divisons-nous!
+Let's split.,Séparons-nous!
+Let's start!,Commençons!
+Let's start.,Commençons.
+Life is fun.,La vie est amusante.
+Look around.,Regarde autour de toi.
+Look around.,Regardez autour de vous.
+Lunch is on.,Le déjeuner est prêt.
+Make a list.,Fais une liste!
+Make a list.,Faites une liste!
+Make a wish.,Fais un souhait!
+Make a wish.,Faites un souhait!
+Many thanks.,Merci beaucoup!
+Many thanks.,Merci vraiment.
+Many thanks.,Merci bien.
+Many thanks.,Grand merci.
+Many thanks.,Mille mercis.
+May I begin?,Puis-je commencer?
+Memorize it.,Mémorise-le.
+Memorize it.,Mémorise-la.
+Memorize it.,Mémorisez-le.
+Memorize it.,Mémorisez-la.
+Money talks.,L'argent est roi.
+Need a lift?,T'as besoin d'un chauffeur?
+Nice timing.,Bien calculé!
+Nice timing.,Pile poil!
+Nice timing.,Pile à l'heure!
+No one came.,Personne n'est venu.
+No one came.,Personne ne vint.
+No one died.,Personne n'est mort.
+No one knew.,Personne ne savait.
+No one left.,Personne ne partit.
+No one left.,Personne n'est parti.
+Nobody came.,Personne n'est venu.
+Nobody came.,Personne ne vint.
+Now I'm sad.,Maintenant je suis attristé.
+Now we wait.,Maintenant nous attendons.
+OK. I agree.,Bien. Je suis d'accord.
+Oh come on.,Oh viens.
+Pick a card.,Pioche une carte!
+Pick a card.,Piochez une carte!
+Pick a date.,Choisissez une date!
+Pick a date.,Choisis une date!
+Plants grow.,Les plantes poussent.
+Plants grow.,Les plantes croissent.
+Please come.,Viens s'il te plait.
+Please come.,S'il te plait viens.
+Please come.,Venez je vous prie.
+Please come.,Veuillez venir.
+Please sing.,Chante je te prie!
+Please sing.,Chantez je vous prie!
+Please sing.,S'il te plaît chante!
+Please sing.,S'il vous plaît chantez!
+Please sing.,Veuillez chanter!
+Please stay.,Reste s'il te plaît.
+Please stay.,Restez s'il vous plaît.
+Please stop.,S'il te plaît arrête.
+Please stop.,S'il vous plaît arrêtez.
+Please stop.,Arrêtez s'il vous plaît.
+Please stop.,Arrête s'il te plaît.
+Please stop.,Veuillez arrêter.
+Please stop.,Merci d'arrêter.
+Please wait.,Veuillez patienter un instant.
+Put it back.,Remets-le en place!
+Put it down.,Laisse-le!
+Put it down.,Pose-le!
+Release him.,Relâche-le!
+Release him.,Relâchez-le!
+Remember it.,Souviens-en-toi.
+Remember it.,Souvenez-vous-en.
+Say goodbye.,Dis au revoir.
+Say goodbye.,Dites au revoir.
+Send him in.,Envoie-le!
+Send him in.,Envoyez-le!
+Shall we go?,Y allons-nous?
+She blushed.,Elle a rougi.
+She fainted.,Elle est tombée dans les pommes.
+She hit him.,Elle le frappa.
+She hit him.,Elle l'a frappé.
+She is dead.,Elle est morte.
+She is kind.,Elle est gentille.
+She is late.,Elle est en retard.
+She woke up.,Elle se réveille.
+She's a dog.,C'est une enfoirée.
+She's a fox.,C'est un renard.
+Should I go?,Devrais-je y aller?
+Should I go?,Devrais-je partir?
+Sleep tight.,Dors bien.
+Sleep tight.,Dormez bien.
+Stand aside.,Reste à l'écart.
+Stand aside.,Restez à l'écart.
+Stand aside.,Écarte-toi.
+Stand aside.,Écartez-vous.
+Stand still!,Pas un geste!
+Stand still!,Tiens-toi tranquille!
+Start again.,Recommence.
+Stay in bed.,Restez au lit!
+Stay in bed.,Reste alité!
+Stay in bed.,Reste alitée!
+Stay in bed.,Restez alité!
+Stay in bed.,Restez alitée!
+Stay in bed.,Restez alités!
+Stay in bed.,Restez alitées!
+Stay inside.,Reste à l'intérieur!
+Step inside.,Avance à l'intérieur.
+Step inside.,Avancez à l'intérieur.
+Stop crying.,Arrête de pleurer!
+Stop crying.,Arrêtez de pleurer!
+Stop trying.,Arrête d'essayer.
+Take a bath.,Prends un bain!
+Take a bite.,Croque!
+Take a bite.,Prends une bouchée!
+Take a bite.,Prenez une bouchée!
+Take a bite.,Croquez!
+Take a card.,Prends une carte.
+Take a card.,Prenez une carte.
+Take a look.,Regarde!
+Take a look.,Regardez!
+Take a look.,Jette un oil!
+Take a look.,Jetez un oil!
+Take a rest.,Reposez-vous.
+Take a rest.,Repose-toi.
+Take a seat.,Assieds-toi!
+Take a seat.,Prenez place!
+Take a seat.,Prends place!
+Take a seat.,Assieds-toi.
+Take a walk.,Va marcher!
+Take a walk.,Allez marcher!
+Take it all.,Prends tout!
+Take it all.,Prenez tout!
+Tea please.,Du thé s'il vous plaît.
+That helped.,Cela a aidé.
+That is all.,C'est tout.
+That worked.,Ça a fonctionné.
+That worked.,Ça a marché.
+That's cool.,C'est super.
+That's cool.,C'est cool.
+That's easy.,C'est simple.
+That's free.,C'est gratuit.
+That's hard.,C'est dur.
+That's hers.,Ce sont les siens.
+That's hers.,C'est le sien.
+That's hers.,C'est la sienne.
+That's hers.,C'est à elle.
+That's icky.,C'est collant.
+That's icky.,C'est gnangnan.
+That's lame.,C'est minable.
+That's lame.,C'est faible.
+That's life.,C'est la vie.
+That's mine.,C'est le mien.
+That's mine.,C'est la mienne.
+That's true.,C'est exact.
+That's ugly.,C'est laid.
+That's wise.,C'est sage.
+The TV's on.,La télé est allumée.
+There he is.,Le voilà.
+There he is.,Le voici.
+There it is.,Il est là.
+They burned.,Ils ont brûlé.
+They burned.,Elles ont brûlé.
+They got it.,Ils l'ont eu.
+They got it.,Ils l'ont eue.
+They hugged.,Ils se sont enlacés.
+They hugged.,Elles se sont enlacées.
+They kissed.,Ils se sont embrassés.
+They obeyed.,Ils ont obéi.
+They smiled.,Ils ont souri.
+They smiled.,Elles ont souri.
+They're bad.,Ils sont mauvais.
+They're bad.,Elles sont mauvaises.
+They're old.,Ils sont vieux.
+They're old.,Elles sont vieilles.
+Think again.,Repenses-y.
+This is bad.,Ça pue.
+This is bad.,C'est pas bon.
+This is bad.,Ce n'est pas bon.
+This is big.,C'est gros.
+This is big.,C'est grand.
+This is his.,C'est le sien.
+This is his.,C'est la sienne.
+This is new.,C'est nouveau.
+This is new.,C'est neuf.
+This is odd.,C'est bizarre.
+This stinks.,Ça pue.
+Tom blinked.,Tom a cligné des yeux.
+Tom blushed.,Tom a rougi.
+Tom changed.,Tom a changé.
+Tom drowned.,Tom se noya.
+Tom drowned.,Tom s'est noyé.
+Tom inhaled.,Tom inspira.
+Tom is bald.,Tom est chauve.
+Tom is hurt.,Tom est blessé.
+Tom is nuts.,Tom est malade mental.
+Tom is rude.,Tom est impoli.
+Tom is safe.,Tom est en sécurité.
+Tom is sexy.,Tom est sexy.
+Tom is slow.,Tom est lent.
+Tom is tall.,Tom est grand.
+Tom is weak.,Tom est faible.
+Tom is wise.,Tom est raisonnable.
+Tom laughed.,Tom rit.
+Tom left me.,Tom m'a quittée.
+Tom listens.,Tom écoute.
+Tom refused.,Tom a refusé.
+Tom said hi.,Tom a dit bonjour.
+Tom said no.,Tom a dit non.
+Tom sweated.,Tom a transpiré.
+Tom took it.,Tom l'a pris.
+Tom'll call.,Tom appellera.
+Tom'll come.,Tom va venir.
+Tom'll come.,Tom viendra.
+Tom'll quit.,Tom va arrêter.
+Tom's alive.,Tom est vivant.
+Tom's alive.,Tom est en vie.
+Tom's alone.,Tom est tout seul.
+Tom's alone.,Tom est seul.
+Tom's angry.,Tom est en colère.
+Tom's awake.,Tom est réveillé.
+Tom's bored.,Tom s'ennuie.
+Tom's crazy.,Tom est dérangé.
+Tom's drunk.,Tom est saoul.
+Tom's drunk.,Tom est ivre.
+Tom's dying.,Thomas est mourant.
+Tom's funny.,Tom est drôle.
+Tom's funny.,Tom est rigolo.
+Tom's funny.,Tom est marrant.
+Tom's lying.,Tom ment.
+Tom's sorry.,Tom est désolé.
+Tom's wrong.,Tom a tort.
+Try to rest.,Essayez de vous reposer.
+Turn around.,Faites demi-tour.
+Turn around.,Fais demi-tour.
+Turn it off.,Éteins-le!
+Turn it off.,Éteignez-le!
+Wait for us.,Attends-nous!
+Wait for us.,Attendez-nous!
+Wake Tom up.,Réveille Tom!
+Walk slowly.,Marche lentement.
+Walk slowly.,Marchez lentement.
+War is evil.,La guerre est mauvaise.
+War is hell.,La guerre, c'est l'enfer.
+Was I wrong?,Avais-je tort?
+Was I wrong?,Ai-je eu tort?
+Was it good?,Était-ce bon?
+Was it good?,C'était bon?
+We all know.,Nous le savons tous.
+We all know.,Nous le savons toutes.
+We all quit.,Nous démissionnons tous.
+We all quit.,Nous démissionnons toutes.
+We all quit.,Nous arrêtons toutes.
+We all quit.,Nous arrêtons tous.
+We all work.,Nous travaillons tous.
+We all work.,Nous travaillons toutes.
+We are here.,Nous sommes ici.
+We are here.,Nous y sommes.
+We broke up.,Nous nous sommes séparés.
+We broke up.,Nous nous sommes séparées.
+We broke up.,Nous nous séparâmes.
+We broke up.,Nous éclatâmes de rire.
+We broke up.,Nous avons éclaté de rire.
+We broke up.,Nous avons rompu.
+We can meet.,Nous pouvons nous rencontrer.
+We can talk.,Nous pouvons discuter.
+We can wait.,Nous pouvons attendre.
+We can't go.,Nous ne pouvons y aller.
+We can't go.,Nous ne pouvons nous y rendre.
+We can't go.,Nous ne pouvons pas y aller.
+We can't go.,Nous ne pouvons pas nous y rendre.
+We can't go.,Nous ne pouvons pas partir.
+We did fine.,Nous nous en sommes bien tirés.
+We did fine.,Nous nous en sommes bien tirées.
+We did that.,Nous avons fait cela.
+We did that.,On a fait ça.
+We found it.,Nous l'avons trouvé.
+We know him.,Nous le connaissons.
+We know him.,On le connaît.
+We like Tom.,Nous aimons bien Tom.
+We like Tom.,Nous aimons Tom.
+We like Tom.,Nous apprécions Tom.
+We like him.,Nous l'apprécions.
+We like him.,Nous l'aimons bien.
+We miss you.,Tu nous manques.
+We must act.,Il nous faut agir.
+We must run.,Il nous faut courir.
+We must try.,Il nous faut essayer.
+We need Tom.,Nous avons besoin de Tom.
+We need you.,On a besoin de toi.
+We need you.,Nous avons besoin de vous.
+We promised.,Nous promîmes.
+We promised.,Nous avons promis.
+We remember.,Nous nous souvenons.
+We remember.,Nous nous en souvenons.
+We survived!,Nous avons survécu!
+We survived.,Nous survécûmes.
+We survived.,Nous avons survécu.
+We want Tom.,Nous voulons Tom.
+We want one.,Nous en voulons un.
+We want one.,Nous en voulons une.
+We'll check.,Nous vérifierons.
+We'll dance.,Nous danserons.
+We'll drive.,Nous conduirons.
+We'll fight.,Nous combattrons.
+We'll hurry.,Nous nous dépêcherons.
+We'll share.,Nous partagerons.
+We'll shoot.,Nous tirerons.
+We'll start.,Nous commencerons.
+We're alone.,Nous sommes seuls.
+We're alone.,Nous sommes seules.
+We're angry.,Nous sommes en colère.
+We're armed.,Nous sommes armés.
+We're armed.,Nous sommes armées.
+We're bored.,Nous nous ennuyons.
+We're broke.,Nous sommes fauchés.
+We're broke.,Nous sommes fauchées.
+We're broke.,On est fauchés.
+We're dying.,Nous sommes en train de mourir.
+We're early.,Nous sommes en avance.
+We're going.,Nous irons.
+We're happy.,Nous sommes heureux.
+We're ready.,Nous sommes prêtes.
+We're saved.,Nous sommes sauvés.
+We're saved.,Nous sommes sauvées.
+We're smart.,Nous sommes intelligents.
