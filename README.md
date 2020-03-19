@@ -12,3 +12,10 @@ lines with each composed of a sentence in english language and its corresponding
 ![dataset_arranged](https://user-images.githubusercontent.com/1300982/76970927-d7e7ed80-692c-11ea-8345-ba5630490e83.png)
 
 Furthermore, these data have been splitted out so as to get the training and test data in to two seperated csv files.
+
+Training the network with few training is already producing very promising results on test data.
+
+![results](https://user-images.githubusercontent.com/1300982/77025761-3dba9080-6992-11ea-9c65-d78aeca40d90.png)
+
+![res](https://user-images.githubusercontent.com/1300982/77025798-5460e780-6992-11ea-8949-0696d155e78a.png)
+
