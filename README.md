@@ -15,7 +15,7 @@ Furthermore, these data have been splitted out so as to get the training and tes
 
 Training the network with few training is already producing very promising results on test data.
 
-![results](https://user-images.githubusercontent.com/1300982/77025761-3dba9080-6992-11ea-9c65-d78aeca40d90.png)
+![results](https://user-images.githubusercontent.com/1300982/77026074-0f898080-6993-11ea-9d56-2dc5b8100051.png)
 
 ![res](https://user-images.githubusercontent.com/1300982/77025920-ab66bc80-6992-11ea-8d41-bf47449043aa.png)
 
