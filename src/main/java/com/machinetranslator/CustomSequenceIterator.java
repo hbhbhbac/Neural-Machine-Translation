@@ -63,8 +63,6 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
 
         while (currentCount < sampleSize) {   //sampleSize here is batchSize
         	item = itemList.get(currentCount + offset);
-        	//System.out.print("Current Count: " + currentCount + "  ");
-    		//System.out.println("LINE NUM: " + item.getLineNum());
         	englishDataItem = item.getEnglishDataItem();
     		frenchDataItem = item.getFrenchDataItem();
     		
@@ -263,6 +261,7 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
     */
     private static void oneHotEncoding() {
 
+    	// Lower case letters of the alphabet
     	int k = 0;
     	for (char chUp = 'a'; chUp <= 'z'; chUp++) {
     		oneHotOrder[k] = Character.toString(chUp);
@@ -270,6 +269,7 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
             k++;
     	}
     	
+    	// Capital letters of the alphabet
     	k = 26;
     	for (char chDown = 'A'; chDown <= 'Z'; chDown++) {
     		oneHotOrder[k] = Character.toString(chDown);
@@ -277,10 +277,13 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
             k++;
     	}
     	
+    	// Digits
         for (int i = 52; i <= 61; i++) {
             oneHotOrder[i] = String.valueOf(i-51);
             oneHotMap.put(String.valueOf(i-51), i);
         }
+        
+        // Special characters
         oneHotOrder[62] = " ";
         oneHotMap.put(" ", 62);
 
