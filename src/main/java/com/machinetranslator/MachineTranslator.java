@@ -149,10 +149,9 @@ public class MachineTranslator {
     		// Now read the file line by line starting from the first line
     		while ((line = fileReader.readLine()) != null) {
     			// Get all tokens available in line
-				String[] tokens = line.split(params.getCommaDelimiter());
+				String[] tokens = line.split(",");
 				if (tokens.length > 0) {
-					Item item = new Item(tokens[params.getEnglishIdx()],
-							             tokens[params.getFrenchIdx()]);
+					Item item = new Item(tokens[1], tokens[0]);
 					itemList.add(item);
 				}
     		}
