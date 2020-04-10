@@ -8,7 +8,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 import org.deeplearning4j.api.storage.StatsStorage;
@@ -48,6 +47,7 @@ public class MachineTranslator {
 		trainDataList = new ArrayList<Item>(readCsvDataFile(params.getTrainDataFile()));
 		trainDataIter = new CustomSequenceIterator(trainDataList.size()/params.getBatchSize(), 
 				                                   trainDataList);
+		//log.info("TRAIN DATA: " + trainDataIter.next(1));
 		
 		// Test data
 		testDataList = new ArrayList<Item>(readCsvDataFile(params.getTestDataFile()));
@@ -102,7 +102,7 @@ public class MachineTranslator {
 	        }
             log.info("Model has been saved....");
 		}
-	}
+    }
 	
     
     private void runTest(CustomSequenceIterator tDataIter, Seq2SeqPredicter predictor) {
@@ -147,12 +147,15 @@ public class MachineTranslator {
     		//fileReader.readLine();
     		
     		// Now read the file line by line starting from the first line
+    		int lineNum = 1;  // to be remove later
     		while ((line = fileReader.readLine()) != null) {
     			// Get all tokens available in line
 				String[] tokens = line.split(",");
 				if (tokens.length > 0) {
 					Item item = new Item(tokens[1], tokens[0]);
+					item.setLineNum(String.valueOf(lineNum)); // to be remove later
 					itemList.add(item);
+					lineNum++;  // to be remove later
 				}
     		}
     	} catch (Exception e) {
@@ -180,7 +183,7 @@ public class MachineTranslator {
     		}
     	}
     	
-    	return tmpString;
+    	return tmpString.replaceAll("EEnndd", "");
     }
     
     
@@ -202,12 +205,12 @@ public class MachineTranslator {
     	return cleaned;
     }
 	
-	/**
-	 * @param args
-	 * @throws Exception 
-	 */
-	public static void main(String[] args) throws Exception {
-		// TODO Auto-generated method stub
-		new MachineTranslator().execute(args);
-	}
+    /**
+    * @param args
+    * @throws Exception 
+    */
+    public static void main(String[] args) throws Exception {
+	// TODO Auto-generated method stub
+	new MachineTranslator().execute(args);
+    }
 }
