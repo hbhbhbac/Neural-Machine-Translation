@@ -12,7 +12,7 @@ import java.util.*;
 
 public class CustomSequenceIterator implements MultiDataSetIterator {
 
-	private static final Logger log = LoggerFactory.getLogger(CustomSequenceIterator.class);
+    private static final Logger log = LoggerFactory.getLogger(CustomSequenceIterator.class);
     private MultiDataSetPreProcessor preProcessor;
     private final int batchSize;
     private final int totalBatches;
@@ -161,24 +161,24 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
     
 
     /**
-     *   Helper method for the decoder input when GGGooo First, or for decoder output when not GGGooo
-     *   Given a string, return a string array which represents the decoder input (or output) given GGGooo First (or not GGGooo First)
+     *   Helper method for the decoder input when GGoo First, or for decoder output when not GGoo
+     *   Given a string, return a string array which represents the decoder input (or output) given GGoo First (or not GGoo First)
      *   Eg. out = "Fait le." (which is the label of "Do it.")
-     *           if GGGooo First, then method will return  {"GGGooo","F","a","i","t"," ","l","e",".","_"}
-     *           if not GGGooo First, then method will return {"F","a","i","t"," ","l","e",".","_","EEEnnnddd"}
+     *           if GGoo First, then method will return  {"GGoo","F","a","i","t"," ","l","e",".","_"}
+     *           if not GGoo First, then method will return {"F","a","i","t"," ","l","e",".","_","EEnndd"}
      *   @param out the french data item. 
      */
     public String[] prepToString(String out, boolean goFirst) {
         int start, end;
         String[] decoded = new String[maxCharForOutputs + 1 + 1];
         if (goFirst) {
-            decoded[0] = "GGGooo";
+            decoded[0] = "GGoo";
             start = 1;
             end = decoded.length - 1;
         } else {
             start = 0;
             end = decoded.length - 2;
-            decoded[decoded.length - 1] = "EEEnnnddd";
+            decoded[decoded.length - 1] = "EEnndd";
         }
 
         int maxIndex = start;
@@ -282,16 +282,17 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
             oneHotOrder[i] = String.valueOf(i-51);
             oneHotMap.put(String.valueOf(i-51), i);
         }
+
+        // Tokens
+        oneHotOrder[62] = "GGoo";
+        oneHotMap.put("GGoo", 62);
+
+        oneHotOrder[63] = "EEnndd";
+        oneHotMap.put("EEnndd", 63);
         
         // Special characters
-        oneHotOrder[62] = " ";
-        oneHotMap.put(" ", 62);
-
-        oneHotOrder[63] = "GGGooo";
-        oneHotMap.put("GGGooo", 63);
-
-        oneHotOrder[64] = "EEEnnnddd";
-        oneHotMap.put("EEEnnnddd", 64);
+        oneHotOrder[64] = " ";
+        oneHotMap.put(" ", 64);
         
         oneHotOrder[65] = ".";
         oneHotMap.put(".", 65);
@@ -308,41 +309,41 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
         oneHotOrder[69] = "'";
         oneHotMap.put("'", 69);
         
-        oneHotOrder[70] = "ô";
-        oneHotMap.put("ô", 70);
+        oneHotOrder[70] = "Ã´";
+        oneHotMap.put("Ã´", 70);
         
-        oneHotOrder[71] = "é";
-        oneHotMap.put("é", 71);
+        oneHotOrder[71] = "Ã©";
+        oneHotMap.put("Ã©", 71);
         
-        oneHotOrder[72] = "î";
-        oneHotMap.put("î", 72);
+        oneHotOrder[72] = "Ã®";
+        oneHotMap.put("Ã®", 72);
         
-        oneHotOrder[73] = "û";
-        oneHotMap.put("û", 73);
+        oneHotOrder[73] = "Ã»";
+        oneHotMap.put("Ã»", 73);
         
-        oneHotOrder[74] = "à";
-        oneHotMap.put("à", 74);
+        oneHotOrder[74] = "Ã ";
+        oneHotMap.put("Ã ", 74);
         
-        oneHotOrder[75] = "ç";
-        oneHotMap.put("ç", 75);
+        oneHotOrder[75] = "Ã§";
+        oneHotMap.put("Ã§", 75);
         
-        oneHotOrder[76] = "â";
-        oneHotMap.put("â", 76);
+        oneHotOrder[76] = "Ã¢";
+        oneHotMap.put("Ã¢", 76);
         
-        oneHotOrder[77] = "ê";
-        oneHotMap.put("ê", 77);
+        oneHotOrder[77] = "Ãª";
+        oneHotMap.put("Ãª", 77);
         
-        oneHotOrder[78] = "Ç";
-        oneHotMap.put("Ç", 78);
+        oneHotOrder[78] = "Ã‡";
+        oneHotMap.put("Ã‡", 78);
         
-        oneHotOrder[79] = "É";
-        oneHotMap.put("É", 79);
+        oneHotOrder[79] = "Ã‰";
+        oneHotMap.put("Ã‰", 79);
         
-        oneHotOrder[80] = "è";
-        oneHotMap.put("è", 80);
+        oneHotOrder[80] = "Ã¨";
+        oneHotMap.put("Ã¨", 80);
         
-        oneHotOrder[81] = "À";
-        oneHotMap.put("À", 81);
+        oneHotOrder[81] = "Ã€";
+        oneHotMap.put("Ã€", 81);
         
         oneHotOrder[82] = "$";
         oneHotMap.put("$", 82);
@@ -353,14 +354,23 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
         oneHotOrder[84] = ":";
         oneHotMap.put(":", 84);
         
-        oneHotOrder[85] = "ù";
-        oneHotMap.put("ù", 85);
+        oneHotOrder[85] = "Ã¹";
+        oneHotMap.put("Ã¹", 85);
         
-        oneHotOrder[86] = "œ";
-        oneHotMap.put("œ", 86);
+        oneHotOrder[86] = "Å“";
+        oneHotMap.put("Å“", 86);
         
-        oneHotOrder[87] = "ï";
-        oneHotMap.put("ï", 87);
+        oneHotOrder[87] = "Ã¯";
+        oneHotMap.put("Ã¯", 87);
+        
+        oneHotOrder[88] = "&";
+        oneHotMap.put("&", 88);
+        
+        oneHotOrder[89] = "%";
+        oneHotMap.put("%", 89);
+        
+        oneHotOrder[90] = "ÃŠ";
+        oneHotMap.put("ÃŠ", 90);
     }
     
 
