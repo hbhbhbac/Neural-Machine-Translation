@@ -19,6 +19,6 @@ Training the network with few training data is already producing very promising 
 
 The second figure presents the predictions of the model when fed with the English sentences from the test data. I have highlighted the lines with sentences in French language that were badly or partially predicted (translated).
 
-![result](https://user-images.githubusercontent.com/1300982/78998855-63762800-7b41-11ea-83b1-d6d77a802637.png)
+![results](https://user-images.githubusercontent.com/1300982/79002661-d59e3b00-7b48-11ea-813a-5766fd6e76ec.png)
 
 
