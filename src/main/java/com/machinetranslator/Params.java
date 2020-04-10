@@ -24,20 +24,20 @@ public class Params {
 	private WorkspaceMode workspaceMode = WorkspaceMode.ENABLED;
 	
 	// Parameters for the training phase (hyper parameters)
-	private int batchSize = 20;  
+	private int batchSize = 20; 
 	private int nEpochs = 120;
 	
-	private int FeatureVectorSize = 88;  // This is the size of the one hot vector
+	private int FeatureVectorSize = 91;  // This is the size of the one hot vector
 	                                     
 	private int maxCharForInputs = 20;  
-	private int maxCharForOutputs = 50;
-	private int numHiddenNodes = 256; 
+	private int maxCharForOutputs = 65;
+	private int numHiddenNodes = 512; 
 	private int seed = 1234;
 	
 	// Data directory. The model file will be saved here.
-    private String dataDir = System.getProperty("user.dir")+ "/src/main/resources/data/";
-    private String trainDataFile = System.getProperty("user.dir")+ "/src/main/resources/data/trainData.csv";
-    private String testDataFile = System.getProperty("user.dir")+ "/src/main/resources/data/testData.csv";
+        private String dataDir = System.getProperty("user.dir")+ "/src/main/resources/data/";
+        private String trainDataFile = System.getProperty("user.dir")+ "/src/main/resources/data/trainData.csv";
+        private String testDataFile = System.getProperty("user.dir")+ "/src/main/resources/data/testData.csv";
 	
 	// Getters
 	
