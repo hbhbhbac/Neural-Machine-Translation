@@ -12,7 +12,7 @@ import java.util.*;
 
 public class CustomSequenceIterator implements MultiDataSetIterator {
 
-    private static final Logger log = LoggerFactory.getLogger(CustomSequenceIterator.class);
+	private static final Logger log = LoggerFactory.getLogger(CustomSequenceIterator.class);
     private MultiDataSetPreProcessor preProcessor;
     private final int batchSize;
     private final int totalBatches;
@@ -20,6 +20,7 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
     private int offset = 0;
     
     private static Params params = new Params();
+    private static Utils utils = new Utils();
 
     private static int maxCharForInputs = params.getMaxCharForInputs();
     private static int maxCharForOutputs = params.getMaxCharForOutputs();
@@ -45,6 +46,18 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
         MultiDataSet testData = next(itemList.size());
         reset();
         return testData;
+    }
+    
+    public MultiDataSet getTestData(int dataSize) {
+    	toTestSet = true;
+    	MultiDataSet testData = null;
+    	
+    	if (dataSize != 0 && dataSize <= itemList.size()) {
+    		testData = next(dataSize);
+    	}
+    	reset();
+    	
+    	return testData;
     }
     
 
@@ -213,7 +226,7 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
     }
 
     public  static String mapToString (INDArray encodeSeq, INDArray decodeSeq) {
-        return mapToString(encodeSeq,decodeSeq," --> ");
+        return mapToString(encodeSeq, decodeSeq, " --> ");
     }
     
     public static String mapToString(INDArray encodeSeq, INDArray decodeSeq, String sep) {
@@ -221,7 +234,7 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
         String [] encodeSeqS = oneHotDecode(encodeSeq);
         String [] decodeSeqS = oneHotDecode(decodeSeq);
         for (int i=0; i<encodeSeqS.length;i++) {
-            ret += "\t" + encodeSeqS[i] + sep +decodeSeqS[i] + "\n";
+            ret += "\t" + utils.cleanUp2(encodeSeqS[i]) + sep +decodeSeqS[i] + "\n";
         }
         return ret;
     }
@@ -238,7 +251,7 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
         INDArray oneHotIndices = Nd4j.argMax(toInterpret, 1); //drops a dimension, so now a two dim array of shape batchSize x time_steps
         for (int i = 0; i < oneHotIndices.size(0); i++) {
             int[] currentSlice = oneHotIndices.slice(i).dup().data().asInt(); //each slice is a batch
-            decodedString[i] = mapFromOneHot(currentSlice);
+            decodedString[i] = utils.cleanUp1(mapFromOneHot(currentSlice));
         }
         return decodedString;
     }
@@ -309,41 +322,41 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
         oneHotOrder[69] = "'";
         oneHotMap.put("'", 69);
         
-        oneHotOrder[70] = "Ã´";
-        oneHotMap.put("Ã´", 70);
+        oneHotOrder[70] = "ô";
+        oneHotMap.put("ô", 70);
         
-        oneHotOrder[71] = "Ã©";
-        oneHotMap.put("Ã©", 71);
+        oneHotOrder[71] = "é";
+        oneHotMap.put("é", 71);
         
-        oneHotOrder[72] = "Ã®";
-        oneHotMap.put("Ã®", 72);
+        oneHotOrder[72] = "î";
+        oneHotMap.put("î", 72);
         
-        oneHotOrder[73] = "Ã»";
-        oneHotMap.put("Ã»", 73);
+        oneHotOrder[73] = "û";
+        oneHotMap.put("û", 73);
         
-        oneHotOrder[74] = "Ã ";
-        oneHotMap.put("Ã ", 74);
+        oneHotOrder[74] = "à";
+        oneHotMap.put("à", 74);
         
-        oneHotOrder[75] = "Ã§";
-        oneHotMap.put("Ã§", 75);
+        oneHotOrder[75] = "ç";
+        oneHotMap.put("ç", 75);
         
-        oneHotOrder[76] = "Ã¢";
-        oneHotMap.put("Ã¢", 76);
+        oneHotOrder[76] = "â";
+        oneHotMap.put("â", 76);
         
-        oneHotOrder[77] = "Ãª";
-        oneHotMap.put("Ãª", 77);
+        oneHotOrder[77] = "ê";
+        oneHotMap.put("ê", 77);
         
-        oneHotOrder[78] = "Ã‡";
-        oneHotMap.put("Ã‡", 78);
+        oneHotOrder[78] = "Ç";
+        oneHotMap.put("Ç", 78);
         
-        oneHotOrder[79] = "Ã‰";
-        oneHotMap.put("Ã‰", 79);
+        oneHotOrder[79] = "É";
+        oneHotMap.put("É", 79);
         
-        oneHotOrder[80] = "Ã¨";
-        oneHotMap.put("Ã¨", 80);
+        oneHotOrder[80] = "è";
+        oneHotMap.put("è", 80);
         
-        oneHotOrder[81] = "Ã€";
-        oneHotMap.put("Ã€", 81);
+        oneHotOrder[81] = "À";
+        oneHotMap.put("À", 81);
         
         oneHotOrder[82] = "$";
         oneHotMap.put("$", 82);
@@ -354,14 +367,14 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
         oneHotOrder[84] = ":";
         oneHotMap.put(":", 84);
         
-        oneHotOrder[85] = "Ã¹";
-        oneHotMap.put("Ã¹", 85);
+        oneHotOrder[85] = "ù";
+        oneHotMap.put("ù", 85);
         
-        oneHotOrder[86] = "Å“";
-        oneHotMap.put("Å“", 86);
+        oneHotOrder[86] = "œ";
+        oneHotMap.put("œ", 86);
         
-        oneHotOrder[87] = "Ã¯";
-        oneHotMap.put("Ã¯", 87);
+        oneHotOrder[87] = "ï";
+        oneHotMap.put("ï", 87);
         
         oneHotOrder[88] = "&";
         oneHotMap.put("&", 88);
@@ -369,8 +382,8 @@ public class CustomSequenceIterator implements MultiDataSetIterator {
         oneHotOrder[89] = "%";
         oneHotMap.put("%", 89);
         
-        oneHotOrder[90] = "ÃŠ";
-        oneHotMap.put("ÃŠ", 90);
+        oneHotOrder[90] = "Ê";
+        oneHotMap.put("Ê", 90);
     }
     
 
