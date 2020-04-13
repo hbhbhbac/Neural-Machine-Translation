@@ -25,7 +25,7 @@ public class Params {
 	
 	// Parameters for the training phase (hyper parameters)
 	private int batchSize = 20; 
-	private int nEpochs = 120;
+	private int nEpochs = 100;
 	
 	private int FeatureVectorSize = 91;  // This is the size of the one hot vector
 	                                     
@@ -35,9 +35,9 @@ public class Params {
 	private int seed = 1234;
 	
 	// Data directory. The model file will be saved here.
-        private String dataDir = System.getProperty("user.dir")+ "/src/main/resources/data/";
-        private String trainDataFile = System.getProperty("user.dir")+ "/src/main/resources/data/trainData.csv";
-        private String testDataFile = System.getProperty("user.dir")+ "/src/main/resources/data/testData.csv";
+    private String dataDir = System.getProperty("user.dir")+ "/src/main/resources/data/";
+    private String trainDataFile = System.getProperty("user.dir")+ "/src/main/resources/data/trainData.csv";
+    private String testDataFile = System.getProperty("user.dir")+ "/src/main/resources/data/testData.csv";
 	
 	// Getters
 	
