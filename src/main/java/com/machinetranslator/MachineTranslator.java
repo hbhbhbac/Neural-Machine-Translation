@@ -66,7 +66,7 @@ public class MachineTranslator {
 			network = ModelSerializer.restoreComputationGraph(modelFilename);
 			
 			// Run test with the current model
-        	runTest(testDataIter, new Seq2SeqPredicter(network), true);
+        	        runTest(testDataIter, new Seq2SeqPredicter(network), true);
 		} else {
 			network = (new NetworkConfig().getNetworkConfig());
 			network.init();
@@ -84,30 +84,30 @@ public class MachineTranslator {
 			network.setListeners(new StatsListener(statsStorage));
 			
 			// Training...
-        	log.info("Training the model....");
-        	int iEpoch = 0;
-        	while (iEpoch < params.getNEpochs()) {
-        		network.fit(trainDataIter);
-            	log.info("** EPOCH " + iEpoch + " COMPLETED **\n");
+        	        log.info("Training the model....");
+        	        int iEpoch = 0;
+        	        while (iEpoch < params.getNEpochs()) {
+        		     network.fit(trainDataIter);
+            	             log.info("** EPOCH " + iEpoch + " COMPLETED **\n");
             	
-            	// Run test with the current model
-            	runTest(testDataIter, new Seq2SeqPredicter(network), true);
-            	trainDataIter.reset();
-            	log.info("\n");
-                iEpoch++;
-        	}
+            	             // Run test with the current model
+            	             runTest(testDataIter, new Seq2SeqPredicter(network), true);
+            	             trainDataIter.reset();
+            	             log.info("\n");
+                             iEpoch++;
+        	        }
         	
-        	// Save model...
-            log.info("Saving the model....");
-            if (save) {
-	        	ModelSerializer.writeModel(network, modelFilename, true);
-	        }
-            log.info("Model has been saved....");
+        	        // Save model...
+                        log.info("Saving the model....");
+                        if (save) {
+	        	      ModelSerializer.writeModel(network, modelFilename, true);
+	                }
+                        log.info("Model has been saved....");
 		}
 	}
 	
     
-    private void runTest(CustomSequenceIterator tDataIter, Seq2SeqPredicter predictor, boolean print) {
+        private void runTest(CustomSequenceIterator tDataIter, Seq2SeqPredicter predictor, boolean print) {
     	
     	MultiDataSet testData = tDataIter.getTestData();
     	INDArray predictions = predictor.output(testData);
@@ -138,12 +138,12 @@ public class MachineTranslator {
     }
     
 	
-	/**
-	 * @param args
-	 * @throws Exception 
-	 */
-	public static void main(String[] args) throws Exception {
-		// TODO Auto-generated method stub
-		new MachineTranslator().execute(args);
-	}
+    /**
+    * @param args
+    * @throws Exception 
+    */
+    public static void main(String[] args) throws Exception {
+           // TODO Auto-generated method stub
+	   new MachineTranslator().execute(args);
+    }
 }
