@@ -37,6 +37,7 @@ public class MachineTranslator {
 	List<Item> testDataList;
 	
 	private Params params = new Params();
+	private Utils utils = new Utils();
 	private boolean save = true;
 	
 	public void execute(String[] args) throws Exception {
@@ -44,15 +45,16 @@ public class MachineTranslator {
 		log.info("Getting the data....");
 		
 		// Train data
-		trainDataList = new ArrayList<Item>(readCsvDataFile(params.getTrainDataFile()));
+		trainDataList = new ArrayList<Item>(utils.readCsvDataFile(params.getTrainDataFile()));
 		trainDataIter = new CustomSequenceIterator(trainDataList.size()/params.getBatchSize(), 
 				                                   trainDataList);
 		//log.info("TRAIN DATA: " + trainDataIter.next(1));
 		
 		// Test data
-		testDataList = new ArrayList<Item>(readCsvDataFile(params.getTestDataFile()));
+		testDataList = new ArrayList<Item>(utils.readCsvDataFile(params.getTestDataFile()));
 		testDataIter = new CustomSequenceIterator(testDataList.size()/params.getBatchSize(), 
 				                                  testDataList);
+		//log.info("TRAIN DATA: " + testDataIter.next(1));
 		
 		// Building model...
 		log.info("Building the model....");
@@ -64,7 +66,7 @@ public class MachineTranslator {
 			network = ModelSerializer.restoreComputationGraph(modelFilename);
 			
 			// Run test with the current model
-        	runTest(testDataIter, new Seq2SeqPredicter(network));
+        	runTest(testDataIter, new Seq2SeqPredicter(network), true);
 		} else {
 			network = (new NetworkConfig().getNetworkConfig());
 			network.init();
@@ -89,7 +91,7 @@ public class MachineTranslator {
             	log.info("** EPOCH " + iEpoch + " COMPLETED **\n");
             	
             	// Run test with the current model
-            	runTest(testDataIter, new Seq2SeqPredicter(network));
+            	runTest(testDataIter, new Seq2SeqPredicter(network), true);
             	trainDataIter.reset();
             	log.info("\n");
                 iEpoch++;
@@ -102,14 +104,21 @@ public class MachineTranslator {
 	        }
             log.info("Model has been saved....");
 		}
-    }
+	}
 	
     
-    private void runTest(CustomSequenceIterator tDataIter, Seq2SeqPredicter predictor) {
+    private void runTest(CustomSequenceIterator tDataIter, Seq2SeqPredicter predictor, boolean print) {
     	
     	MultiDataSet testData = tDataIter.getTestData();
     	INDArray predictions = predictor.output(testData);
     	encode_decode_eval(predictions, testData.getFeatures()[0], testData.getLabels()[0]);
+    	
+    	if (print) {
+    		log.info("\n");
+    		log.info("Printing stepping through the decoder for a minibatch of size 4 :");
+        	MultiDataSet testDataForStepping = tDataIter.getTestData(4);
+        	predictor.output(testDataForStepping, true);
+    	}
     }
     
     
@@ -122,95 +131,19 @@ public class MachineTranslator {
         String[] predictionS = CustomSequenceIterator.oneHotDecode(predictions);
         
         for (int iTest = 0; iTest < nTests; iTest++) {
-        	log.info(cleanUp2(questionS[iTest]) + "  ---->  " + "' "+ cleanUp1(predictionS[iTest]) + " '" + " COORECT ANSWER: " + cleanUp1(answersS[iTest]));
+        	log.info(utils.cleanUp2(questionS[iTest]) + "  ---->  " + "' "+ 
+                     utils.cleanUp1(predictionS[iTest]) + " '" + " COORECT ANSWER: " + 
+        			 utils.cleanUp1(answersS[iTest]));
         }
     }
     
-    
-    /**
-     *   Helper method that takes in a string representing the full path of the csv file containing the train/test data
-     *   @param filePath.
-     */
-    private List<Item> readCsvDataFile(String filePath) {
-    	
-    	// Create a new list of line instances to be fill
-		List<Item> itemList = new ArrayList<Item>();
-    	BufferedReader fileReader = null;
-    	
-    	try {   		
-    		String line = "";
-    		
-    		// Create the fileReader
-    		fileReader = new BufferedReader(new FileReader(filePath));
-    		
-    		// Read the CSV file header to skip it
-    		//fileReader.readLine();
-    		
-    		// Now read the file line by line starting from the first line
-    		int lineNum = 1;  // to be remove later
-    		while ((line = fileReader.readLine()) != null) {
-    			// Get all tokens available in line
-				String[] tokens = line.split(",");
-				if (tokens.length > 0) {
-					Item item = new Item(tokens[1], tokens[0]);
-					item.setLineNum(String.valueOf(lineNum)); // to be remove later
-					itemList.add(item);
-					lineNum++;  // to be remove later
-				}
-    		}
-    	} catch (Exception e) {
-    		log.info("!!! Data file not found !!!");
-    		e.printStackTrace();
-    	} finally {
-    		try {
-    			fileReader.close();
-    		} catch (IOException ioe) {
-    			log.info("!!! Error while closing fileReader !!!");
-				ioe.printStackTrace();
-    		}
-    	}
-    	
-    	return itemList;
-    }
-    
-    
-    private String cleanUp1(String in) {
-    	String tmpString = new String();
-    	
-    	for (int i = 0; i < in.length(); i++) {
-    		if (in.charAt(i) != '_') {
-    			tmpString = tmpString + in.charAt(i);
-    		}
-    	}
-    	
-    	return tmpString.replaceAll("EEnndd", "");
-    }
-    
-    
-    private String cleanUp2(String in) {
-    	
-    	String cleaned =  new String();
-    	String tmpString = new String();
-    	
-    	for (int i = 0; i < in.length(); i++) {
-    		if (in.charAt(i) != '_') {
-    			tmpString = tmpString + in.charAt(i);
-    		}
-    	}
-    	
-    	for (int i = (tmpString.length() - 1); i >= 0; i--) {
-    		cleaned = cleaned + Character.toString(tmpString.charAt(i));
-    	}
-    	
-    	return cleaned;
-    }
 	
-    /**
-    * @param args
-    * @throws Exception 
-    */
-    public static void main(String[] args) throws Exception {
-	// TODO Auto-generated method stub
-	new MachineTranslator().execute(args);
-    }
+	/**
+	 * @param args
+	 * @throws Exception 
+	 */
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		new MachineTranslator().execute(args);
+	}
 }
