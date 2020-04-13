@@ -55,7 +55,7 @@ public class Seq2SeqPredicter {
             if (print) {
             	log.info("In time step "+currentStepThrough);
             	log.info("\tEncoder input and Decoder input:");
-            	log.info(CustomSequenceIterator.mapToString(testSet.getFeatures()[0],decoderInputTemplate, " +  "));
+            	log.info(CustomSequenceIterator.mapToString(testSet.getFeatures()[0], decoderInputTemplate, " +  "));
 
             }
             ret = stepOnce(testSet, currentStepThrough);
