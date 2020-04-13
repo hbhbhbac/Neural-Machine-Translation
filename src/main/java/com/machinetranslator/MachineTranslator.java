@@ -132,8 +132,8 @@ public class MachineTranslator {
         
         for (int iTest = 0; iTest < nTests; iTest++) {
         	log.info(utils.cleanUp2(questionS[iTest]) + "  ---->  " + "' "+ 
-                     utils.cleanUp1(predictionS[iTest]) + " '" + " COORECT ANSWER: " + 
-        			 utils.cleanUp1(answersS[iTest]));
+                         utils.cleanUp1(predictionS[iTest]) + " '" + " COORECT ANSWER: " + 
+        	         utils.cleanUp1(answersS[iTest]));
         }
     }
     
