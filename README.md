@@ -7,6 +7,8 @@ The NMT will attempt to perforn an English to French translation experiment.
 
 Our neural machine translation will be implemented at character level where the next character is predicted given the previous sequence of characters.
 
+Because of the fact that this NMT is dealing with two languages (English and French), we adopted a neural architecture with two LSTM layers which  is known as the encoder-decoder RNN structure. In this architecture, one LSTM layer is used for the  original language (English) and the other LSTM layer is used for the target language (French).
+
 The dataset used to train this NMT can be freely downloaded at [http://www.manythings.org/anki/](http://www.manythings.org/anki/). 
 It contains commonly used sententenses in both languages. The data of this dataset have been transfered to csv files and arranged in 
 lines with each composed of a sentence in english language and its corresponding translation in french language, both seperated by a comma. (see the following figure)
