@@ -5,6 +5,8 @@ When neural networks are used to perform this task, we talk about neural machine
 This implementation is based on the exemple that models the sequence to sequence RNNs used for the addition operation and which can be found [here](https://github.com/eclipse/deeplearning4j-examples/tree/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/recurrent/seq2seq).
 The NMT will attempt to perforn an English to French translation experiment.
 
+Our neural machine translation will be implemented at character level where the next character is predicted given the previous sequence of characters.
+
 The dataset user to train this NMT can be freely downloaded at [http://www.manythings.org/anki/](http://www.manythings.org/anki/). 
 It contains commonly used sententenses in both languages. The data of this dataset have been transfered to csv files and arranged in 
 lines with each composed of a sentence in english language and its corresponding translation in french language, both seperated by a comma. (see the following figure)
