@@ -7,7 +7,7 @@ The NMT will attempt to perforn an English to French translation experiment.
 
 Our neural machine translation will be implemented at character level where the next character is predicted given the previous sequence of characters.
 
-The dataset user to train this NMT can be freely downloaded at [http://www.manythings.org/anki/](http://www.manythings.org/anki/). 
+The dataset used to train this NMT can be freely downloaded at [http://www.manythings.org/anki/](http://www.manythings.org/anki/). 
 It contains commonly used sententenses in both languages. The data of this dataset have been transfered to csv files and arranged in 
 lines with each composed of a sentence in english language and its corresponding translation in french language, both seperated by a comma. (see the following figure)
 
