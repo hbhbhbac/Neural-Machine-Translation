@@ -17,7 +17,7 @@ lines with each composed of a sentence in english language and its corresponding
 
 Furthermore, these data have been splitted out so as to get the training and test data in to two seperated csv files.
 
-Training the network with few training data is already producing very promising results on test data, as shown in the following two figures. The first figure depicts the Model Score vs. Iteration (and a moving average of the score).
+Training the network with few training data is already producing very promising results on test data, as shown in the following two figures. The first figure depicts the Model Score vs. Iteration, which is the visualisation of the loss plot. It allows us to visualize the loss of the network against each iteration and check the model performance.
 
 ![shart](https://user-images.githubusercontent.com/1300982/78967582-ca242300-7afa-11ea-8b5c-678db76f8d01.png)
 
