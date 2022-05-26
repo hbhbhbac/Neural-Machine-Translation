@@ -39,6 +39,11 @@ public class MachineTranslator {
 	private Params params = new Params();
 	private Utils utils = new Utils();
 	private boolean save = true;
+
+	public static void main(String[] args){
+		MachineTranslator translator_hb = new MachineTranslator();
+		translator_hb.execute();
+	}
 	
 	public void execute(String[] args) throws Exception {
 		
